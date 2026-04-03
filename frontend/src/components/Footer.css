@@ -1,0 +1,25 @@
+﻿.footer {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 55px 0 32px;
+  margin-top: 60px;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+.footer-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.footer-brand p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; max-width: 300px; }
+.footer-links h5 { font-size: 0.9rem; font-weight: 700; color: #0f172a; margin-bottom: 14px; }
+.footer-links a, .footer-links p { display: block; color: #64748b; font-size: 0.87rem; margin-bottom: 8px; transition: color 0.2s; }
+.footer-links a:hover { color: var(--primary); }
+@media (max-width: 900px) { .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; } }
+@media (max-width: 600px) { .footer-inner { grid-template-columns: 1fr; } }

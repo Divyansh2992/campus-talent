@@ -1,0 +1,100 @@
+﻿.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.07);
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f172a;
+}
+.logo-icon { font-size: 1.65rem; }
+.logo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+.logo-text span {
+  background: linear-gradient(90deg, #2d7eef 0%, #4f91ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.nav-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #334155;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.25s, color 0.25s;
+}
+.nav-link:hover { background: #ebf4ff; color: #1e3a8a; }
+
+.btn-sm {
+  padding: 0.55rem 0.95rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+}
+
+.navbar-avatar { display: flex; align-items: center; }
+.avatar-placeholder, .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+.avatar { object-fit: cover; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background: #334155;
+  border-radius: 2px;
+}
+
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+  .navbar-links {
+    position: absolute;
+    inset: 74px 0 auto 0;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 1rem;
+    border-top: 1px solid #e2e8f0;
+    gap: 0.75rem;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+    display: none;
+  }
+  .navbar-links.open { display: flex; }
+}

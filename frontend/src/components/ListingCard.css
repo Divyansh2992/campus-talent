@@ -1,0 +1,126 @@
+﻿.listing-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+.listing-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+.listing-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.listing-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.listing-card:hover .listing-img { transform: scale(1.05); }
+
+.listing-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  color: #2f436b;
+  background: rgba(45, 126, 239, 0.1);
+}
+
+.listing-category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #1e3a8a;
+  background: rgba(45, 126, 239, 0.16);
+  text-transform: capitalize;
+}
+
+.listing-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listing-title {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.25;
+  min-height: 2.5rem;
+}
+
+.listing-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-height: 1.6rem;
+}
+
+.listing-meta { display: flex; justify-content: space-between; align-items: center; }
+
+.listing-seller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.avatar-placeholder.avatar-sm {
+  width: 30px;
+  height: 30px;
+  font-size: 0.72rem;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.seller-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.seller-college {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.listing-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.listing-rating { display: flex; align-items: center; gap: 6px; }
+
+.rating-count { font-size: 0.75rem; color: var(--text-muted); }
+
+.listing-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0b2b64;
+}

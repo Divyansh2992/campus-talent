@@ -1,0 +1,35 @@
+.listing-detail-page { padding: 40px 0 80px; }
+.ld-grid { display: grid; grid-template-columns: 1fr 420px; gap: 36px; align-items: start; }
+.ld-images { margin-bottom: 32px; }
+.ld-main-img { border-radius: var(--radius); overflow: hidden; height: 380px; background: var(--surface-2); }
+.ld-main-img img { width: 100%; height: 100%; object-fit: cover; }
+.ld-no-img { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+.ld-thumbs { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.ld-thumb { width: 72px; height: 72px; object-fit: cover; border-radius: 10px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.2s; }
+.ld-thumb.active, .ld-thumb:hover { border-color: var(--primary); }
+.ld-reviews { padding: 28px; }
+.ld-reviews h3 { margin-bottom: 20px; font-size: 1.1rem; }
+.no-reviews { color: var(--text-muted); font-size: 0.88rem; }
+.reviews-list { display: flex; flex-direction: column; gap: 20px; margin-bottom: 28px; }
+.review-item { padding-bottom: 20px; border-bottom: 1px solid var(--border-light); }
+.review-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.review-user { display: flex; align-items: center; gap: 10px; }
+.review-comment { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+.review-form { padding-top: 24px; border-top: 1px solid var(--border-light); display: flex; flex-direction: column; gap: 14px; }
+.review-form h4 { font-size: 1rem; color: var(--text); }
+.ld-info { padding: 28px; margin-bottom: 20px; }
+.ld-info .badge { margin-bottom: 14px; text-transform: capitalize; }
+.ld-title { font-size: 1.6rem; color: var(--text); margin-bottom: 14px; }
+.ld-rating-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.ld-orders { font-size: 0.8rem; color: var(--text-muted); background: var(--surface-2); padding: 3px 10px; border-radius: 99px; }
+.ld-price { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--accent); margin-bottom: 16px; }
+.ld-desc { font-size: 0.92rem; line-height: 1.7; margin-bottom: 16px; }
+.ld-delivery { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; }
+.ld-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.ld-order-box { display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border-light); }
+.seller-card { padding: 24px; }
+.seller-card h4 { margin-bottom: 16px; }
+.seller-info { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
+.avatar-lg { width: 64px; height: 64px; font-size: 1.4rem; }
+.seller-name-big { font-size: 1rem; font-weight: 600; color: var(--text); }
+@media (max-width: 1024px) { .ld-grid { grid-template-columns: 1fr; } }
