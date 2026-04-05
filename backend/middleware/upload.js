@@ -1,12 +1,22 @@
 const multer = require('multer');
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const cloudinary = require('cloudinary').v2;
 const path = require('path');
 
-const storage = multer.diskStorage({
-  destination(req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename(req, file, cb) {
-    cb(null, `${Date.now()}-${file.originalname}`);
+// Configure cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+// Setup Cloudinary storage
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'college-market/listings',
+    allowed_formats: ['jpeg', 'jpg', 'png', 'webp'],
+    transformation: [{ width: 1200, height: 800, crop: 'fill', quality: 'auto' }],
   },
 });
 
@@ -21,6 +31,10 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-const upload = multer({ storage, fileFilter, limits: { fileSize: 5 * 1024 * 1024 } });
+const upload = multer({ 
+  storage, 
+  fileFilter, 
+  limits: { fileSize: 5 * 1024 * 1024 } 
+});
 
 module.exports = upload;

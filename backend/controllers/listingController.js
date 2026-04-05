@@ -34,7 +34,7 @@ const getListingById = async (req, res) => {
 // @desc Create listing
 const createListing = async (req, res) => {
   const { title, description, category, price, deliveryTime, tags } = req.body;
-  const images = req.files ? req.files.map(f => `/uploads/${f.filename}`) : [];
+  const images = req.files ? req.files.map(f => f.secure_url) : [];
   const listing = await Listing.create({
     seller: req.user._id, title, description, category,
     price: Number(price), deliveryTime, images,

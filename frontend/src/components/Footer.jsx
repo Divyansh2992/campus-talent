@@ -25,7 +25,7 @@ const Footer = () => (
       <div className="footer-links">
         <h5>About</h5>
         <p>Made with ❤️ for SVNITians</p>
-        <p>© 2024 CampusKart</p>
+        <p>© {new Date().getFullYear()} CampusKart</p>
       </div>
     </div>
   </footer>
