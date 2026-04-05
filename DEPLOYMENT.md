@@ -59,7 +59,13 @@ After deployment, note down your Render URL (e.g., `https://campuskart-backend.o
    - `VITE_API_URL`: Your Render backend URL
 6. Click "Deploy site"
 
-### Step 3: Update Redirects
+### Step 3: Fix MIME Type Issues (if encountered)
+If you see "Failed to load module script" errors:
+1. The `netlify.toml` and `_headers` files are pre-configured to fix MIME type issues
+2. Push the latest changes to trigger a new deployment
+3. Netlify will automatically apply the correct headers for JavaScript modules
+
+### Step 4: Update Redirects
 After deployment, update the `netlify.toml` file with your actual backend URL and push to GitHub.
 
 ---
@@ -100,6 +106,7 @@ After deployment, update the `netlify.toml` file with your actual backend URL an
 - Ensure API endpoints return correct data
 
 ### Common Issues
+- **MIME type errors**: Fixed automatically by the `netlify.toml` and `_headers` files
 - **CORS errors**: Add your Netlify domain to allowed origins in backend
 - **API calls failing**: Double-check the `VITE_API_URL` environment variable
 - **Images not loading**: Ensure upload endpoints work and URLs are correct
