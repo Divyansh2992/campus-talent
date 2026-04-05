@@ -55,6 +55,7 @@ After deployment, note down your Render URL (e.g., `https://campuskart-backend.o
    - **Base directory**: `frontend`
    - **Build command**: `npm run build`
    - **Publish directory**: `dist`
+   - **Node version**: 20 (automatically set by netlify.toml)
 5. Add Environment Variables:
    - `VITE_API_URL`: Your Render backend URL
 6. Click "Deploy site"
@@ -106,6 +107,7 @@ After deployment, update the `netlify.toml` file with your actual backend URL an
 - Ensure API endpoints return correct data
 
 ### Common Issues
+- **Node.js version errors**: Fixed by netlify.toml specifying Node.js 20
 - **MIME type errors**: Fixed automatically by the `netlify.toml` and `_headers` files
 - **CORS errors**: Add your Netlify domain to allowed origins in backend
 - **API calls failing**: Double-check the `VITE_API_URL` environment variable
